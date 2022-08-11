@@ -1,0 +1,530 @@
+/* Reseteo CSS */
+* { 
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+/* CSS General */
+
+@media (min-width: 1024px) {
+
+a:link {
+    text-decoration: none;
+}
+
+.logo {
+    background-color: #D9D9D9;
+    width: 100%;
+    height: 100%;
+    text-align: center; 
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+nav {
+    background-color: #BBB6B6;
+    text-align: center;
+    height: 80px;
+    width: 100%;
+}
+
+aside span {
+    margin: 1%;
+    padding: 10px 10px;
+}
+
+span:hover {
+    background-color: #BBB6B6;
+    border-left: solid 8px #E5A060
+    }
+
+footer {
+    background-color: #BBB6B6;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+form {
+    background-color: #D9D9D9;
+    text-align: left;
+    padding: 6%;
+    
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input {
+   padding: 1%;
+   font-weight: bold;
+   display: block;
+   width: 40%;
+   font-size: 1rem;
+   font-weight: 300;
+   line-height: 1.5;
+   color: #BBB6B6;
+   background-color: #fff;
+   background-clip: padding-box;
+   border: 1px solid #ced4da;
+   border-radius: 0.25rem;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 24px;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;;
+}
+
+div {
+    text-align: center;
+}
+
+div p {
+    font-size: 16px;
+}
+
+/* BOX MODELING DESKTOP */ 
+
+.fotoHidrolavadora {
+    border-style: inset 10px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #E5A060;
+    height: 50%;
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+.fotoMotosierra {
+    border-style: inset 10px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #E5A060;
+    height: 50%;
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+.caracteristicas {
+    background-color: #BBB6B6;
+    font-weight: bold;
+    width: 50%;
+    padding: 20px;
+    list-style-type: none;
+    text-align: center;
+}
+
+/* ANIMACION FOOTER */
+
+.pieAnimado {
+    animation-name: pieAnim;
+    animation-duration: 10s ;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.44,.45,.56,.58);
+}
+
+@keyframes pieAnim {
+ from {
+    transform: translateX(-1000px)
+    }
+to {
+    transform: translateX(1000px);
+    }
+}
+
+/* ANIMACION CLASE PRODUCTOS */
+
+.productos {
+    animation-name: productos;
+    animation-duration: 4s;
+}
+
+@keyframes productos {
+    from  {
+       transform: translateX(1000px)
+    }
+    to {
+       transform: translateX(0px);
+    }
+}
+
+/* ANIMACION CLASE SERVICIOS */
+.servicios {
+    animation-name: servicios;
+    animation-duration: 2s;
+}
+
+@keyframes servicios {
+    from  {
+       transform: translateX(1000px)
+    }
+    to {
+       transform: translateX(0px);
+    }
+} 
+/* TRANSICION CATEGORIAS LATERAL */
+.spanTransicion {
+    transition: width 5s height 5s;
+    background-image: linear-gradient(to right, #BBB6B6, #282426 60%);
+}
+
+.spanTransicion:hover {
+    width: 80%;
+}
+
+/* FLEXBOX DESKTOP */
+    .menu-flex { 
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    }
+    
+    .lateral-flex {
+        background-color: #383636;
+        color: white;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        padding: 20px;
+        width: 60%;
+    }
+    
+    .parrafo-flex {
+        background-color: #E5A060; 
+        display: inline-block;
+        color: black;
+        width: 50%;
+        padding: 5px;
+        margin-bottom: 5px;
+        margin-top: 15px;
+        font-weight: bold;
+        text-align: center;
+        display: flex; 
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .seccion-flex {
+        background-color: #E5A060;
+        font-weight: bold;
+        padding: 15px 15px;
+        border-color: #E5A060;
+        border-radius: 5px;
+        border-style: solid;
+        height: 50px;
+        margin: 1%;
+    }
+
+    .formulario-flex {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        background-image: #d9d9d9;
+    }
+
+/* GRIDS POR AREAS EN INDEX */
+
+.grid {
+    display: grid;
+    /* Estructura por areas */
+    grid-template-areas: 
+ "cabeza cabeza cabeza" /* Fila 1 */
+ "menu menu menu" /* Fila 2 */
+ "lateral productos categoria" /* Fila 3 */ 
+ "pie pie pie" ; /* Fila 4 */
+ grid-template-columns: 1fr 1fr 1fr;
+ grid-template-rows: 1fr 1fr 10fr 1fr;
+}
+
+/* GRID POR AREAS EN CONTACTO */
+
+.grid-contacto {
+    display: grid;
+    /* Estructura por areas */
+    grid-template-areas: 
+ "cabeza cabeza cabeza" /* Fila 1 */
+ "menu menu menu" /* Fila 2 */
+ "formulario lateral lateral" /* Fila 3 */ 
+ "pie pie pie" ; /* Fila 4 */
+ grid-template-columns: 1fr 3fr 2fr;
+ grid-template-rows: 1fr 1fr 1fr 1fr;
+ grid-column-gap: 70px;
+}
+
+ /* NOMBRAR AREAS GRIDS */
+ 
+ header {
+    grid-area: cabeza;
+ }
+
+ nav {
+    grid-area: menu;
+ }
+
+.productos {
+    grid-area: categoria;
+}
+
+aside{
+    grid-area: lateral;
+}
+
+.servicios {
+    grid-area: productos;
+}
+
+footer {
+    grid-area: pie;
+}
+
+main {
+    grid-area: formulario;
+}
+
+
+/* Fin Responsive Desktop */ 
+
+}
+
+
+
+/* RESPONSIVE DESIGN MOBILE */ 
+@media (max-width: 480px) {
+    /* ESTRUCTURA GRID INDEX */
+.grid {
+    display: grid;
+    /* Estructura por areas */
+    grid-template-areas: 
+    "cabeza " /* Fila 1 */
+    "menu" /* Fila 2 */
+    "lateral" /* Fila 3 */ 
+    "productos" /* Fila 4 */
+    "categoria" /* Fila 5 */
+    "pie" /* Fila 6 */ ;
+ grid-template-columns: 1fr; 
+ grid-template-rows: 1fr 1fr 1fr 2fr 2fr 1fr;
+}
+ 
+/* ESTRUCTURA GRID CONTACTO */
+
+.grid-contacto {
+    display: grid;
+    /* Estructura por areas */
+    grid-template-areas: 
+ "cabeza" /* Fila 1 */
+ "menu" /* Fila 2 */
+ "formulario" /* Fila 3 */ 
+ "lateral"/* Fila 4 */
+ "pie"  /* Fila 5 */ ;
+ grid-template-columns: 1fr;
+ grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+ a:link {
+    text-decoration: none;
+}
+
+.logo {
+    background-color: #D9D9D9;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+nav {
+    background-color: #BBB6B6;
+    text-align: center;
+    height: 80px;
+    width: 100%;
+}
+
+aside span {
+    margin: 1%;
+    padding: 10px 10px;
+}
+
+span:hover {
+    background-color: #BBB6B6;
+    border-left: solid 8px #E5A060
+    }
+
+
+footer {
+    background-color: #BBB6B6;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    width: 100%;
+}
+
+form {
+    background-color: #D9D9D9;
+    text-align: left;
+    padding: 6%;
+    
+}
+
+form label {
+    font-weight: bold;
+}
+
+textarea {
+    width: 60%;
+    height: 30vh;
+}
+form input {
+   padding: 1%;
+   font-weight: bold;
+   display: block;
+   width: 40%;
+   font-size: 1rem;
+   font-weight: 300;
+   line-height: 1.5;
+   color: #BBB6B6;
+   background-color: #fff;
+   background-clip: padding-box;
+   border: 1px solid #ced4da;
+   border-radius: 0.25rem;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 24px;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+div {
+    text-align: center;
+}
+
+div p {
+    font-size: 16px;
+}
+
+/* BOX MODELING MOBILE */ 
+
+.fotoHidrolavadora {
+    border-style: inset 10px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #E5A060;
+    height: 50%;
+    width: 50%;
+    margin-bottom: 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin-left: 25%;
+}
+
+.fotoMotosierra {
+    border-style: inset 10px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #E5A060;
+    height: 50%;
+    width: 50%;
+    margin-bottom: 50px;
+    margin-left: 25%;
+}
+
+.caracteristicas {
+    background-color: #BBB6B6;
+    font-weight: bold;
+    width: 50%;
+    padding: 20px;
+    list-style-type: none;
+    text-align: center;
+    margin-left: 25%;
+}
+
+/* FLEXBOX MOBILE */
+
+    .menu-flex { 
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    }
+    
+    .lateral-flex {
+        background-color: #383636;
+        color: white;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 20px;
+        width: 100%;
+    }
+    
+    .parrafo-flex {
+        background-color: #E5A060; 
+        display: inline-block;
+        color: black;
+        width: 50%;
+        padding: 5px;
+        margin-bottom: 5px;
+        margin-top: 15px;
+        margin-left: 25%;
+        font-weight: bold;
+        text-align: center;
+        display: flex; 
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .seccion-flex {
+        background-color: #E5A060;
+        font-weight: bold;
+        padding: 15px 15px;
+        height: 50px;
+        margin: 1%;
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    
+    .formulario-flex {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        background-image: #d9d9d9;
+    }
+
+}
+/* Fin Responsive Mobile */ 
+
+
+

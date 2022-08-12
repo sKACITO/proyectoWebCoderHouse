@@ -126,64 +126,6 @@ div p {
     text-align: center;
 }
 
-/* ANIMACION FOOTER */
-
-.pieAnimado {
-    animation-name: pieAnim;
-    animation-duration: 10s ;
-    animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(.44,.45,.56,.58);
-}
-
-@keyframes pieAnim {
- from {
-    transform: translateX(-1000px)
-    }
-to {
-    transform: translateX(1000px);
-    }
-}
-
-/* ANIMACION CLASE PRODUCTOS */
-
-.productos {
-    animation-name: productos;
-    animation-duration: 4s;
-}
-
-@keyframes productos {
-    from  {
-       transform: translateX(1000px)
-    }
-    to {
-       transform: translateX(0px);
-    }
-}
-
-/* ANIMACION CLASE SERVICIOS */
-.servicios {
-    animation-name: servicios;
-    animation-duration: 2s;
-}
-
-@keyframes servicios {
-    from  {
-       transform: translateX(1000px)
-    }
-    to {
-       transform: translateX(0px);
-    }
-} 
-/* TRANSICION CATEGORIAS LATERAL */
-.spanTransicion {
-    transition: width 5s height 5s;
-    background-image: linear-gradient(to right, #BBB6B6, #282426 60%);
-}
-
-.spanTransicion:hover {
-    width: 80%;
-}
-
 /* FLEXBOX DESKTOP */
     .menu-flex { 
     display: flex;
